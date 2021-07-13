@@ -1,0 +1,35 @@
+{
+  "name": "univ3staking",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile": "hardhat compile",
+    "lint": "eslint . --ext .ts",
+    "prettier:check": "prettier-check contracts/**/*.sol test/**/*.ts types/*.ts",
+    "size-contracts": "hardhat compile && hardhat size-contracts",
+    "test": "hardhat test",
+    "clear-cache": "rm -rf artifacts/ cache/ typechain/",
+    "coverage": "RUN_COVERAGE=1 hardhat coverage"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@openzeppelin/contracts": "3.4.1-solc-0.7-2",
+    "@uniswap/v3-core": "1.0.0",
+    "@uniswap/v3-periphery": "^1.0.1",
+    "dotenv": "^10.0.0"
+  },
+  "devDependencies": {
+    "@openzeppelin/test-helpers": "^0.5.12",
+    "chai": "^4.2.0",
+    "eth-gas-reporter": "^0.2.22",
+    "ethers": "^5.0.8",
+    "ganache-time-traveler": "^1.0.16",
+    "hardhat": "^2.2.0",
+    "hardhat-contract-sizer": "^2.0.3",
+    "solidity-coverage": "^0.7.16",
+    "truffle-contract-size": "^2.0.1",
+    "truffle-plugin-verify": "^0.5.11"
+  }
+}
